@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:wallet/routing/route_generator.dart';
-import 'package:wallet/UI/WelcomeScreen.dart';
+import 'package:wallet/screens/welcome.dart';
 import 'package:flutter_icon_network/flutter_icon_network.dart';
 import 'dart:async';
 
-import 'UI/onboarding_screen/onboarding_screen.dart';
+import 'screens/onboarding_screen/onboarding.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await FlutterIconNetwork.instance!

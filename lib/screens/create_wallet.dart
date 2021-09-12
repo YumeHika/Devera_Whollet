@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wallet/routing/routes.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_icon_network/flutter_icon_network.dart';
-import 'dart:async';
-import 'package:wallet/UI/HomeLoadWallet.dart';
+import 'package:wallet/screens/home_whollet.dart';
 class Begin extends StatefulWidget {
   BeginState createState() => BeginState();
 }

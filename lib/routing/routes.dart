@@ -5,7 +5,6 @@ class Routes {
   static const String EnterPin = '/EnterPin';
   static const String ForgotPassword = '/ForgotPassword';
   static const String CheckYourEmail = '/CheckYourEmail';
-  static const String NewPassword = '/NewPassword';
   static const String SignUp = '/SignUp';
   static const String CreatePin = '/CreatePin';
   static const String CreatePinConfirm = '/CreatePinConfirm';

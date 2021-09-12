@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_icon_network/flutter_icon_network.dart';
 import 'package:flutter/services.dart';
-import 'package:wallet/UI/SendICX.dart';
-import 'package:wallet/UI/QRScanPage.dart';
+import 'package:wallet/screens/sendICX.dart';
+import 'package:wallet/screens/qr_scan.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+
 class HomeLoadWallet extends StatefulWidget {
   final String? _address;
   final String? _privateKey;
@@ -82,7 +83,7 @@ class _HomeLoadWalletState extends State<HomeLoadWallet> {
               ],
             ),
             title: Text(
-              'ICON Wallet',
+              'Whollet',
               style: TextStyle(
                   fontFamily: "SF Pro Display",
                   fontSize: 30,
@@ -519,15 +520,60 @@ class _HomeLoadWalletState extends State<HomeLoadWallet> {
               ]),
             ),
           ]),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              Navigator.of(context)
-                  .pushNamedAndRemoveUntil('/Begin', (route) => false);
-            },
-            child: Icon(Icons.logout),
-          ),
+        bottomNavigationBar: SizedBox(
+                height: 70.0,
+                child: BottomAppBar(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: IconButton(
+                                icon: Image.asset('assets/image/Transactions.png'),
+                                onPressed: () {
+                                  _callWidgeSend();
+                                _getBalance();
+                                }),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Text('Transactions',
+                                style: TextStyle(color: Colors.black)),
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: IconButton(
+                                icon: Image.asset('assets/image/Portfolio.png'),
+                                onPressed: () {                         
+                                }),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child:
+                            Text('Portfolio', style: TextStyle(color: Colors.black)),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              floatingActionButton: FloatingActionButton(
+                  child: Icon(Icons.add),
+                  backgroundColor: Color(0xffF96060),
+                  onPressed: () {
+                  }),
+              floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         );
       }),
     );
   }
 }
+
+

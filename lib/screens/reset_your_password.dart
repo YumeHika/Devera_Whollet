@@ -41,7 +41,7 @@ class _CheckYourEmailState extends State<CheckYourEmail> {
           Container(
             padding: EdgeInsets.only(left: 32, right: 32, bottom: 80),
             child: Text(
-                'Follow a password recovery instructions we have just sent to your email address ',
+                'Check all email addresses and follow the steps to recover your account ',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 15,
@@ -57,7 +57,7 @@ class _CheckYourEmailState extends State<CheckYourEmail> {
                   constraints: BoxConstraints.tightFor(width: 200, height: 50),
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.popAndPushNamed(context,Routes.NewPassword);
+                        Navigator.popAndPushNamed(context,Routes.Login);
                       },
                       child: Text(
                         'Back to Login',

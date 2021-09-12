@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:wallet/routing/routes.dart';
-import 'package:wallet/UI/WelcomeScreen.dart';
-import 'package:wallet/UI/Login.dart';
-import 'package:wallet/UI/SignUp.dart';
-import 'package:wallet/UI/CreatePin.dart';
-import 'package:wallet/UI/CreatePinConfirm.dart';
-import 'package:wallet/UI/ForgotPassword.dart';
-import 'package:wallet/UI/CheckYourEmail.dart';
-import 'package:wallet/UI/NewPassword.dart';
-import 'package:wallet/UI/EnterPin.dart';
-import 'package:wallet/UI/Begin.dart';
+import 'package:wallet/screens/welcome.dart';
+import 'package:wallet/screens/login.dart';
+import 'package:wallet/screens/sign_up.dart';
+import 'package:wallet/screens/create_pin.dart';
+import 'package:wallet/screens/create_pin_confirm.dart';
+import 'package:wallet/screens/forgot_password.dart';
+import 'package:wallet/screens/reset_your_password.dart';
+import 'package:wallet/screens/enter_pin.dart';
+import 'package:wallet/screens/create_wallet.dart';
 class RouteGenerator {
   static RouteGenerator? _instance;
 
@@ -37,8 +36,6 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => ForgotPassword());
       case Routes.CheckYourEmail:
         return MaterialPageRoute(builder: (_) => CheckYourEmail());
-      case Routes.NewPassword:
-        return MaterialPageRoute(builder: (_) => NewPassword());
       case Routes.EnterPin:
         return MaterialPageRoute(builder: (_) => EnterPin());
       case Routes.Begin:
